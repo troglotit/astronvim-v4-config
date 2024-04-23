@@ -32,7 +32,7 @@ return {
         -- "lua_ls",
         "tsserver",
         "typescript-tools",
-        "prettierd",
+        -- "prettierd",
         "prettier",
         "eslint",
       },
