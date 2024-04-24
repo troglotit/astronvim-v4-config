@@ -11,5 +11,9 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.colorscheme.catppuccin", enable = true },
-  -- import/override with your plugins folder
+
+  { import = "astrocommunity.git.git-blame-nvim" },
+  { import = "astrocommunity.git.blame-nvim" },
+  { import = "astrocommunity.git.diffview-nvim" },
+  -- import/override with your plugins folder[sd]
 }
