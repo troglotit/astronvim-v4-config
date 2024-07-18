@@ -29,7 +29,7 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true, -- sets vim.opt.wrap
         swapfile = false,
       },
       g = { -- vim.g.<key>
@@ -77,7 +77,7 @@ return {
         -- this is useful for naming menus
         ["H"] = { ":bprevious<cr>" },
         ["L"] = { ":bnext<cr>" },
-        ["<C-j>"] = { "i<Enter><esc>k$" },
+        -- ["<C-j>"] = { "i<Enter><esc>k$" },
         ["<Leader>b"] = { desc = "Buffers" },
         ["<leader>s"] = { name = "Search and Custom" },
         ["<leader>ss"] = {
