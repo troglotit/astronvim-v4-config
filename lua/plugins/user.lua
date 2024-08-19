@@ -54,6 +54,12 @@ return {
             ["p"] = "PushPopup",
           },
         },
+        sections = {
+          recent = {
+            folded = false,
+            hidden = false
+          },
+        },
       }
     end,
   },
