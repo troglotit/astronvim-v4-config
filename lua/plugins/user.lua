@@ -55,9 +55,13 @@ return {
           },
         },
         sections = {
+          stashes = {
+            folded = false,
+            hidden = false,
+          },
           recent = {
             folded = false,
-            hidden = false
+            hidden = false,
           },
         },
       }
@@ -140,4 +144,19 @@ return {
       )
     end,
   },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    opts = function(_, opts)
+      opts.mode = "topline"
+      return opts
+    end,
+  }
+  -- {
+  --     {
+  --       "supermaven-inc/supermaven-nvim",
+  --       config = function()
+  --         require("supermaven-nvim").setup({})
+  --       end,
+  --     },
+  -- }
 }
