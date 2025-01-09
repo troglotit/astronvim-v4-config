@@ -8,10 +8,14 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
-  { import = "astrocommunity.colorscheme.catppuccin", enable = true },
+  { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
+  { import = "astrocommunity.colorscheme.catppuccin", enable = false },
+  { import = "astrocommunity.colorscheme.onedarkpro-nvim", enable = true },
 
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
+
+  -- { import = "astrocommunity.completion.blink-cmp" },
   -- import/override with your plugins folder[sd]
 }

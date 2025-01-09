@@ -9,4 +9,11 @@ return {
       require "astronvim.plugins.configs.telescope"(plugin, opts)
     end,
   },
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   config = function(plugin, opts)
+  --     opts.window.auto_expand_width = true
+  --     require 'astronvim.plugins.configs.neo-tree'(plugin, opts)
+  --   end,
+  -- },
 }

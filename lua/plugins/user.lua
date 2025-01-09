@@ -16,22 +16,29 @@ return {
   {
     "ggandor/leap.nvim",
     lazy = false,
+    dependencies = {
+      "tpope/vim-repeat",
+    },
+    specs = {
+      {
+        "catppuccin",
+        optional = true,
+        ---@type CatppuccinOptions
+        opts = { integrations = { leap = true } },
+      },
+    },
     config = function()
       local leap = require "leap"
-      local target_windows = vim.tbl_filter(
-        function(win) return vim.api.nvim_win_get_config(win).focusable end,
-        vim.api.nvim_tabpage_list_wins(0)
-      )
-      vim.keymap.set(
-        { "n", "x" },
-        "<leader>j",
-        function()
-          leap.leap {
-            target_windows = target_windows,
-            inclusive_op = false,
-          }
-        end
-      )
+      vim.keymap.set({ "n", "x" }, "<leader>j", function()
+        local target_windows = vim.tbl_filter(
+          function(win) return vim.api.nvim_win_get_config(win).focusable end,
+          vim.api.nvim_tabpage_list_wins(0)
+        )
+        leap.leap {
+          target_windows = target_windows,
+          inclusive_op = false,
+        }
+      end)
     end,
   },
   {
@@ -63,6 +70,10 @@ return {
             folded = false,
             hidden = false,
           },
+        },
+        integrations = {
+          diffview = true,
+          telescope = true,
         },
       }
     end,
@@ -148,9 +159,10 @@ return {
     "nvim-treesitter/nvim-treesitter-context",
     opts = function(_, opts)
       opts.mode = "topline"
+      opts.multiline_threshold = 1
       return opts
     end,
-  }
+  },
   -- {
   --     {
   --       "supermaven-inc/supermaven-nvim",
@@ -159,4 +171,11 @@ return {
   --       end,
   --     },
   -- }
+  {
+    "hat0uma/csvview.nvim",
+    config = function() require("csvview").setup() end,
+  },
+  {
+    { "vuki656/package-info.nvim", enabled = false },
+  },
 }
