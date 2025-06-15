@@ -14,6 +14,7 @@ return {
       "elixir",
       "css",
       "scss",
+      "nix"
       -- add more arguments for adding more treesitter parsers
     })
     -- opts.incremental_selection = {

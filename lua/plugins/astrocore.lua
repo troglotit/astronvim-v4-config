@@ -80,19 +80,43 @@ return {
         -- ["<C-j>"] = { "i<Enter><esc>k$" },
         ["<Leader>b"] = { desc = "Buffers" },
         ["<leader>s"] = { name = "Search and Custom" },
-        ["<leader>ss"] = {
-          desc = "Current buffer fuzzy find",
-          function() require("telescope.builtin").current_buffer_fuzzy_find { fuzzy = false } end,
-        },
-        ["<leader>se"] = {
-          desc = "Current buffer find",
-          function() require("telescope.builtin").live_grep { search_dirs = { vim.fn.expand "%:p" } } end,
-        },
+        -- ["<leader>ss"] = {
+        --   desc = "Current buffer fuzzy find",
+        --   function() require("telescope.builtin").current_buffer_fuzzy_find { fuzzy = false } end,
+        -- },
+        -- ["<leader>ss"] = {
+        --   desc = "Current buffer fuzzy find",
+        --   function()
+        --     require("snacks.picker").lines {
+        --       finder = "lines",
+        --       format = "lines",
+        --       layout = {
+        --         preview = "main",
+        --         preset = "ivy",
+        --       },
+        --       jump = { match = true },
+        --       -- allow any window to be used as the main window
+        --       main = { current = true },
+        --       ---@param picker snacks.Picker
+        --       on_show = function(picker)
+        --         local cursor = vim.api.nvim_win_get_cursor(picker.main)
+        --         local info = vim.api.nvim_win_call(picker.main, vim.fn.winsaveview)
+        --         picker.list:view(cursor[1], info.topline)
+        --         picker:show_preview()
+        --       end,
+        --       sort = { fields = { "score:desc", "idx" } },
+        --     }
+        --   end,
+        -- },
+        -- ["<leader>se"] = {
+        --   desc = "Current buffer find",
+        --   function() require("telescope.builtin").live_grep { search_dirs = { vim.fn.expand "%:p" } } end,
+        -- },
         -- keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
-        ["<leader>sg"] = {
-          desc = "Live Grep Args",
-          function() require("telescope-live-grep-args.shortcuts").grep_word_under_cursor() end,
-        },
+        -- ["<leader>sg"] = {
+        --   desc = "Live Grep Args",
+        --   function() require("telescope-live-grep-args.shortcuts").grep_word_under_cursor() end,
+        -- },
       },
       t = {
         -- setting a mapping to false will disable it

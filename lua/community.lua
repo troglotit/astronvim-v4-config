@@ -6,6 +6,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.nix" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
@@ -17,8 +18,10 @@ return {
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
 
-  { import = "astrocommunity.search.nvim-spectre" },
+  -- { import = "astrocommunity.search.nvim-spectre" },
 
-  -- { import = "astrocommunity.completion.blink-cmp" },
+  { import = "astrocommunity.fuzzy-finder.snacks-picker" },
+
+  { import = "astrocommunity.completion.blink-cmp" },
   -- import/override with your plugins folder[sd]
 }

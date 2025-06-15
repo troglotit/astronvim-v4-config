@@ -42,7 +42,10 @@ return {
     end,
   },
   {
-    "NeogitOrg/neogit",
+    -- "NeogitOrg/neogit",
+    "fang2hou/neogit",
+    -- TODO: move after https://github.com/NeogitOrg/neogit/pull/1654 is merged
+    branch = "feature/snacks-integration",
     dependencies = {
       { "nvim-lua/plenary.nvim" },
     },
@@ -73,7 +76,8 @@ return {
         },
         integrations = {
           diffview = true,
-          telescope = true,
+          telescope = false,
+          snacks = true,
         },
       }
     end,
@@ -91,26 +95,26 @@ return {
   -- == Examples of Overriding Plugins ==
 
   -- customize alpha options
-  {
-    "goolord/alpha-nvim",
-    opts = function(_, opts)
-      -- customize the dashboard header
-      opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
-      }
-      return opts
-    end,
-  },
+  -- {
+  --   "goolord/alpha-nvim",
+  --   opts = function(_, opts)
+  --     -- customize the dashboard header
+  --     opts.section.header.val = {
+  --       " █████  ███████ ████████ ██████   ██████",
+  --       "██   ██ ██         ██    ██   ██ ██    ██",
+  --       "███████ ███████    ██    ██████  ██    ██",
+  --       "██   ██      ██    ██    ██   ██ ██    ██",
+  --       "██   ██ ███████    ██    ██   ██  ██████",
+  --       " ",
+  --       "    ███    ██ ██    ██ ██ ███    ███",
+  --       "    ████   ██ ██    ██ ██ ████  ████",
+  --       "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
+  --       "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
+  --       "    ██   ████   ████   ██ ██      ██",
+  --     }
+  --     return opts
+  --   end,
+  -- },
 
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
@@ -177,5 +181,8 @@ return {
   },
   {
     { "vuki656/package-info.nvim", enabled = false },
+  },
+  {
+    { "kevinhwang91/nvim-ufo", enabled = true },
   },
 }
