@@ -9,6 +9,8 @@ return {
   { import = "astrocommunity.pack.nix" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
+  { import = "astrocommunity.pack.astro" },
+
   { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
 
   { import = "astrocommunity.colorscheme.catppuccin", enable = false },
