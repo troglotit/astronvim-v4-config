@@ -17,3 +17,6 @@ end
 
 require "lazy_setup"
 require "polish"
+
+local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
+vim.cmd.source(vimrc)
