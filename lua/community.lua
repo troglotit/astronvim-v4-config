@@ -20,6 +20,8 @@ return {
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
 
+  { import = "astrocommunity.editing-support.neogen" },
+
   -- { import = "astrocommunity.search.nvim-spectre" },
 
   { import = "astrocommunity.fuzzy-finder.snacks-picker" },
