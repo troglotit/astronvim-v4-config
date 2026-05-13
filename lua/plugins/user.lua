@@ -14,7 +14,7 @@ return {
     end,
   },
   {
-    "ggandor/leap.nvim",
+    url = "https://codeberg.org/andyg/leap.nvim",
     lazy = false,
     dependencies = {
       "tpope/vim-repeat",
@@ -44,8 +44,6 @@ return {
   {
     -- "NeogitOrg/neogit",
     "fang2hou/neogit",
-    -- TODO: move after https://github.com/NeogitOrg/neogit/pull/1654 is merged
-    branch = "feature/snacks-integration",
     dependencies = {
       { "nvim-lua/plenary.nvim" },
     },
@@ -183,6 +181,6 @@ return {
     { "vuki656/package-info.nvim", enabled = false },
   },
   {
-    { "kevinhwang91/nvim-ufo", enabled = true },
+    -- { "kevinhwang91/nvim-ufo", enabled = true },
   },
 }
