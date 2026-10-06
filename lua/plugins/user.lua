@@ -24,7 +24,7 @@ return {
         "catppuccin",
         optional = true,
         ---@type CatppuccinOptions
-        opts = { integrations = { leap = true } },
+        opts = { integrations = { leap = true, neotree = true, neogit = true, } },
       },
     },
     config = function()

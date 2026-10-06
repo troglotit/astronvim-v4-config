@@ -11,6 +11,14 @@ return {
     -- change colorscheme
     colorscheme = "catppuccin",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
+    --
+    folding = {
+      -- whether a buffer should have folding can be true/false for global enable/disable or fun(bufnr:integer):boolean
+      -- enabled = function(bufnr) return require("astrocore.buffer").is_valid(bufnr) end,
+      enabled = true,
+      -- a priority list of fold methods to try using, available methods are "lsp", "treesitter", and "indent"
+      methods = { "lsp", "treesitter", "indent" },
+    },
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
